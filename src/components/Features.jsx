@@ -2,9 +2,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
-import "swiper/css/autoplay"; // Import Swiper autoplay styles
+import "swiper/css/autoplay"; 
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
-import { RxArrowTopRight } from "react-icons/rx";
 
 // Sample features data
 const features = [
@@ -60,52 +59,53 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="flex items-center justify-center flex-col h-[900px] bg-[#304eb3]">
-      <div className="left w-1/3  flex text-5xl font-bold ml-10">
-        The <h1 className="text-[#6187FA] pl-5">Problem</h1>
+    <div className="relative flex items-center justify-center flex-col h-[900px]">
+      <div className="absolute top-10 left-16 flex text-5xl font-bold">
+        The <h1 className="text-[#6187FA] pl-5">Features</h1>
       </div>
-      <Swiper
-        breakpoints={{
-          340: {
-            slidesPerView: 1,
-            spaceBetween: 15,
-          },
-          700: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 15,
-          },
-        }}
-        freeMode={true}
-        loop={true}
-        autoplay={{
-          delay: 1,
-          disableOnInteraction: false,
-          
-        }}
-        speed={3000}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[FreeMode, Pagination, Autoplay]} 
-        className="max-w-[90%] lg:max-w-[80%]"
-      >
-        {features.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="flex flex-col gap-6 mb-20 group  shadow-lg text-white rounded-xl px-6 py-8 h-[400px] w-[215px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer bg-[#000000]">
-              <div className="relative flex flex-col gap-3">
-                <h1 className="text-xl lg:text-2xl">{item.title}</h1>
-                <p className="text-sm">{item.description}</p>
-                <img src={item.img} alt={item.title} className="mt-4 rounded-lg" />
+      <div className="mt-20 w-full flex justify-center">
+        <Swiper
+          breakpoints={{
+            340: {
+              slidesPerView: 1,
+              spaceBetween: 15,
+            },
+            700: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 15,
+            },
+          }}
+          freeMode={true}
+          loop={true}
+          autoplay={{
+            delay: 1,
+            disableOnInteraction: false,
+          }}
+          speed={3000}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[FreeMode, Pagination, Autoplay]}
+          className="max-w-[90%] lg:max-w-[80%]"
+        >
+          {features.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[400px] w-[215px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer bg-[#000000]">
+                <div className="relative flex flex-col gap-3 absolute">
+                  <h1 className="text-xl lg:text-2xl">{item.title}</h1>
+                  <p className="text-sm">{item.description}</p>
+                  <img src={item.img} alt={item.title} className="mt-4 rounded-lg relative bottom-0" />
+                </div>
+                
               </div>
-              <RxArrowTopRight className="absolute bottom-5 left-5 w-[35px] h-[35px] text-white group-hover:text-blue-500 group-hover:rotate-45 duration-100" />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 }
