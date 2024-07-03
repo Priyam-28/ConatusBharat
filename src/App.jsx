@@ -15,7 +15,7 @@ export default function App() {
 
       <>
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        <VideoSection />
+        <VideoSection darkMode={darkMode} />
         <ProblemSection darkMode={darkMode} />
         <Features darkMode={darkMode} />
         <Footer darkMode={darkMode}/>

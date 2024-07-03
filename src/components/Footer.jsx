@@ -35,7 +35,7 @@ const Footer = ({ darkMode }) => {
           </div>
         </div>
         <div className="w-full md:w-1/3 flex justify-center items-center mb-6 md:mb-0">
-          <img src="Logo_Conatus_dark.png" alt="Conatus Logo" className="h-20" />
+          <img src="Logo_Conatus_dark.png" alt="Conatus Logo" className="h-15" />
         </div>
         <div className="w-full md:w-1/3 flex flex-col mb-6 md:mb-0 md:justify-start md:items-start pl-16">
           <div className="mb-4">
