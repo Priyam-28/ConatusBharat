@@ -19,29 +19,29 @@ const ProblemSection = ({ darkMode }) => {
         </div>
       </div>
 
-      <div className="hidden md:justify-start">
+      <div className="hidden lg:block">
         <img
-          src={'Frame 30.png'}
+          src={'Frame.png'}
           alt="Problem Illustration"
           className="w-full md:w-hidden"
           draggable="false"
         />
       </div>
-      <div className="flex flex-col md:hidden space-y-8">
+      <div className="flex flex-col lg:hidden space-y-8">
         <div className="flex flex-col space-y-2 text-left">
           <h1 className="text-[#6187FA] text-7xl font-bold">01</h1>
           <h2 className="font-semibold text-2xl">What is Wonder?</h2>
-          <p className="text-lg">Wonder is an adaptive learning platform that personalizes education to each child's unique strengths and learning style. We empower students to reach their full potential and become lifelong learners who embrace their individuality.</p>
+          <p className="text-lg">Wonder is an adaptive learning platform that personalizes education to each child&apos;s unique strengths and learning style. We empower students to reach their full potential and become lifelong learners who embrace their individuality.</p>
         </div>
         <div className="flex flex-col space-y-2 text-right">
           <h1 className="text-[#6187FA] text-7xl font-bold">02</h1>
           <h2 className="font-semibold text-2xl">What makes us different ? </h2>
-          <p className="text-lg">Wonder isn't just about grades; it's about nurturing the spark in every child. We lovingly blend academics with skills and personalized insights,guiding students to discover their hidden talents and embrace their unique way of learning</p>
+          <p className="text-lg">Wonder isn&apos;t just about grades; it&apos;s about nurturing the spark in every child.We lovingly blend academics with skills and personalized insights,guiding students to discover their hidden talents and embrace their unique way of learning</p>
         </div>
         <div className="flex flex-col space-y-2 text-left">
           <h1 className="text-[#6187FA] text-7xl font-bold">03</h1>
           <h2 className="font-semibold text-2xl">What more do we offer ?</h2>
-          <p className="text-lg">We offer a gamified learning experience, fostering collaboration between teachers and parents, while providing comprehensive reports on each child's growth and potential.</p>
+          <p className="text-lg">We offer a gamified learning experience,fostering collaboration between teachers and parents,while providing comprehensive reports on each child&apos;s growth and potential.</p>
         </div>
       </div>
 

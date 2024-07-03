@@ -72,7 +72,7 @@ const Features = ({ darkMode }) => {
       <div className="absolute top-5 lg:top-10 left-5 lg:left-16 flex text-3xl lg:text-5xl font-bold">
         The <h1 className="text-[#6187FA] pl-2 lg:pl-5">Features</h1>
       </div>
-      <div className="mt-20 w-full flex justify-center">
+      <div className="mt-2 lg:mt-20 w-full flex justify-center">
         <Swiper
           breakpoints={{
             340: {
@@ -80,7 +80,7 @@ const Features = ({ darkMode }) => {
               spaceBetween: 15,
             },
             700: {
-              slidesPerView: 1,
+              slidesPerView: 2,
               spaceBetween: 15,
             },
             1024: {
@@ -99,10 +99,10 @@ const Features = ({ darkMode }) => {
             clickable: true,
           }}
           modules={[FreeMode, Pagination, Autoplay]}
-          className="max-w-[90%] lg:max-w-[80%]"
+          className="w-full max-w-[90%] lg:max-w-[80%]"
         >
           {features.map((item, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="flex justify-center">
               <div className={`flex flex-col gap-6 mb-20 group relative shadow-lg rounded-xl px-6 py-8 h-[400px] w-[260px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}>
                 <div className="flex flex-col gap-3 justify-between h-full">
                   <div>

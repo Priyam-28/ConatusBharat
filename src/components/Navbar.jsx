@@ -13,7 +13,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <nav
-      className={`w-screen h-[93px] flex items-center justify-between font-bold sticky top-0 ${
+      className={`w-screen h-[50px] flex items-center justify-between font-bold sticky top-0 ${
         darkMode ? 'bg-black text-white' : 'bg-white text-black'
       } z-50 px-4 md:px-16`}
     >
@@ -21,7 +21,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <div className="block text-2xl cursor-pointer" onClick={toggleMenu}>
           <IoMdMenu size={"30px"}/>
         </div>
-        <span className="text-[#487DFF] text-3xl block p-3 items-center">Wonder</span>
+        <span className="text-[#487DFF] text-2xl block p-3 items-center">Wonder</span>
         <span className="block h-12">
           <img src={darkMode ? 'Logo_Conatus_dark.png' : 'Logo_Conatus.png'} className="h-12" alt="logo" />
         </span>
@@ -40,28 +40,27 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <div className="flex flex-col md:flex-row md:items-center text-lg space-y-2 md:space-y-0 md:space-x-6 cursor-pointer">
           <div className="hover:text-blue-500 transition-colors duration-300">Parents</div>
           <div className="hover:text-blue-500 transition-colors duration-300">Subject</div>
-        </div>
-        <div className="flex items-center justify-between w-full mt-4">
-          <button className="rounded-2xl w-20 h-8 bg-black  text-white hover:scale-110 transition-transform duration-300 ease-in-out">
+          <button className="hover:text-blue-500 transition-colors duration-300 text-left">
             Login
           </button>
           <SunMoonSlider darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         </div>
+        
       </div>
       <div className="hidden md:flex items-center justify-between w-full">
         <span className="block h-12">
           <img src={darkMode ? 'Logo_Conatus_dark.png' : 'Logo_Conatus.png'} className="h-12" alt="logo" />
         </span>
         <div className="flex items-center space-x-6">
-          <div className="hover:text-blue-500 text-xl transition-colors duration-300">Features</div>
-          <div className="hover:text-blue-500 text-xl transition-colors duration-300">Contact</div>
-          <span className="text-[#487DFF] text-3xl block p-3 items-center">Wonder</span>
-          <div className="hover:text-blue-500 text-xl transition-colors duration-300">Parents</div>
-          <div className="hover:text-blue-500 text-xl transition-colors duration-300">Subject</div>
+          <div className="hover:text-blue-500 text-base transition-colors duration-300">Features</div>
+          <div className="hover:text-blue-500 text-base transition-colors duration-300">Contact</div>
+          <span className="text-[#487DFF] text-xl block p-3 items-center">Wonder</span>
+          <div className="hover:text-blue-500 text-base transition-colors duration-300">Parents</div>
+          <div className="hover:text-blue-500 text-base transition-colors duration-300">Subject</div>
         </div>
         <div className="flex items-center space-x-4">
           <button
-            className={`rounded-2xl w-20 h-8 ${
+            className={`rounded-2xl w-16 h-8 text-sm ${
               darkMode ? 'bg-white text-black' : 'bg-black text-white'
             } hover:scale-105 transition-transform duration-300 ease-in-out`}
           >
