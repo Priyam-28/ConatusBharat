@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
+import { IoMdMenu } from "react-icons/io";
 
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
@@ -18,17 +19,17 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     >
       <div className="md:hidden flex items-center justify-between w-full">
         <div className="block text-2xl cursor-pointer" onClick={toggleMenu}>
-          <img src="Menu.png" alt="menu icon" className="h-8 w-8" />
+          <IoMdMenu size={"30px"}/>
         </div>
-        <span className="text-[#487DFF] text-2xl block p-3 items-center">Wonder</span>
+        <span className="text-[#487DFF] text-3xl block p-3 items-center">Wonder</span>
         <span className="block h-12">
           <img src={darkMode ? 'Logo_Conatus_dark.png' : 'Logo_Conatus.png'} className="h-12" alt="logo" />
         </span>
       </div>
       <div
         className={`content flex-col md:flex md:flex-row items-center cursor-pointer space-y-2 ${
-          darkMode ? 'bg-gray-800' : 'bg-slate-500'
-        } md:space-x-6 absolute md:relative top-[93px] left-0 w-1/2 h-screen text-lg md:w-auto md:top-0 ${
+          darkMode ? 'bg-white opacity-75 text-black' : 'bg-white '
+        } md:space-x-6 absolute md:relative top-[93px] left-0 w-full p-5 h-screen text-lg md:w-auto md:top-0 ${
           menuOpen ? 'block' : 'hidden'
         } md:hidden`}
       >
@@ -40,8 +41,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           <div className="hover:text-blue-500 transition-colors duration-300">Parents</div>
           <div className="hover:text-blue-500 transition-colors duration-300">Subject</div>
         </div>
-        <div className="flex items-center justify-between space-x-4 w-full mt-4">
-          <button className="rounded-2xl w-20 h-8 bg-black text-white hover:scale-110 transition-transform duration-300 ease-in-out">
+        <div className="flex items-center justify-between w-full mt-4">
+          <button className="rounded-2xl w-20 h-8 bg-black  text-white hover:scale-110 transition-transform duration-300 ease-in-out">
             Login
           </button>
           <SunMoonSlider darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
