@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 const ProblemSection = ({ darkMode }) => {
   return (
-    <div className={`p-6 md:p-10 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
+    <div className={`p-6 md:p-10 ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
       <div className="flex flex-col md:flex-row pb-10 gap-6 md:gap-10">
-        <div className="w-full md:w-1/3 flex text-3xl md:text-5xl font-bold ml-2 md:ml-10">
+        <div className="w-full md:w-1/2 flex text-3xl md:text-5xl font-bold ml-2 md:ml-10">
           The <h1 className="text-[#6187FA] pl-2 md:pl-5">Problem</h1>
         </div>
         <div className="w-full md:w-1/2 text-sm md:text-lg">
@@ -21,17 +21,17 @@ const ProblemSection = ({ darkMode }) => {
 
       <div className="flex justify-center md:justify-start">
         <img
-          src={'Frame 30.svg'}
+          src={'Frame 30.png'}
           alt="Problem Illustration"
-          className="w-full md:w-auto"
+          className="w-full md:w-hidden"
           draggable="false"
         />
-        <img
-          src={darkMode ? 'mobile-image_dark.svg' : 'mobile-image.svg'}
+        {/* <img
+          src={'Frame 30.svg'}
           alt="Mobile Problem Illustration"
           className="w-full md:hidden"
           draggable="false"
-        />
+        /> */}
       </div>
     </div>
   );
